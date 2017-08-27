@@ -1,4 +1,4 @@
--create movie directive class
+create movie directive class
 <br>
 <BLOCKQUOTE>bind two way property named rating</BLOCKQUOTE>
   
