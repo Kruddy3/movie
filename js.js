@@ -1,12 +1,39 @@
+var app = angular.module('movieList',[])
+
+app.controller('reviewsController',function(){
+  this.movies=movieRatings;
+
+  this.submit = function(data){
+    alert("hello")
+  }
+});
+
+app.controller('submitReview',function ($scope) {
+  $scope.movieRatings = []
+  $scope.UserName = 'UserName'
+
+  $scope.submit = function(){
+    $scope.ratings.push($scope);
+    $scope.UserName = '';
+  }
+});
+
+
+
+var movieRatings = [
+  {name: "The Lobster", ratings:[{user:"user", stars: 5}]},
+  {name: "The Prestige", ratings:[{user:"Kevin", stars: 4}]}]
+
+/* OLD CODE
 (function(){
 var app = angular.module('store',[]);
 
 app.controller('ReviewController',function(){
   this.reviews = movies;
 
-  this.addReview = function (product) {
-    product.reviews.push(this.review)
-    this.review = {};
+  this.addReview = function ($scope) {
+    $scope.ratings(this.reviews)
+    $scope.reviews = {};
   }
 });
 
@@ -43,3 +70,4 @@ var movies = [
   ];
 
 })();
+*/
