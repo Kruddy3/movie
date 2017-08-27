@@ -1,5 +1,5 @@
 -create movie directive class
 <br>
-  bind two way property named rating
+<BLOCKQUOTE>bind two way property named rating</BLOCKQUOTE>
   
 -from view loop through movies and input the star rating into your directive
