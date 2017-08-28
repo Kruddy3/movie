@@ -16,6 +16,7 @@
           <b>stars: </b>{{movieRatings.stars}}
           !-->
           {{userNameReview}}
+          <star-ratings></star-ratings>
           <br>
           <form ng-submit='submitReview(data)' ng-controller="submitReview">
             <input type="text" ng-model="UserName" >
@@ -24,6 +25,7 @@
       </div>
       <br>
     </div>
+
   </body>
 </html>
 

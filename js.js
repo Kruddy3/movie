@@ -8,6 +8,17 @@ app.controller('reviewsController',function(){
   }
 });
 
+app.directive('starRatings', function(){
+  return{
+    restrict: 'E',
+    //having issues linkning the page directly peopel say you can serve it to a server but directly to a html file causes issues idk
+    //spent a while trying to solve this because I cant get my laptop to work and the computer doesnt let you install things (need admin)
+    //got it to work using python "python -m SimpleHTTPServer 8000"
+    templateUrl: 'star-rating.html'
+  }
+});
+
+
 app.controller('submitReview',function ($scope) {
   $scope.movieRatings = []
   $scope.UserName = 'UserName'
