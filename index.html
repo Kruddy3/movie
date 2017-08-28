@@ -12,9 +12,7 @@
 
     <div ng-repeat="movieName in reviews.movies">
       {{movieName.name}}
-        <b>stars: </b>{{movieRatings.stars}}
-        <br>
-        {{movieName.stars | json}}
+        <b>stars:</b>{{movieName.stars | json}}
         <br>
         {{newReview}}
         {{myRating | json}} <!-- doesnt appear to work and I cant find the "output" command!-->
