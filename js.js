@@ -2,10 +2,6 @@ var app = angular.module('movieList',[])
 
 app.controller('reviewsController',function(){
   this.movies=movieRatings;
-
-  this.submit = function(data){
-    alert("hello")
-  }
 });
 
 app.directive('starRatings', function(){
@@ -15,18 +11,31 @@ app.directive('starRatings', function(){
     //spent a while trying to solve this because I cant get my laptop to work and the computer doesnt let you install things (need admin)
     //got it to work using python "python -m SimpleHTTPServer 8000"
     templateUrl: 'star-rating.html'
+
   }
 });
 
+app.filter('average',function(){
+  return function(number){
+    var avger=0;
+    for (var i = 0; i < number.length; i++) {
+      avger = avger + Number(number[i])
+    }
+    avger = avger/number.length
+    return avger.toFixed(1);
 
+  }
+})
 
-
-
+// app.controller('average',function($scope) {
+//   $scope.avgStars = $scope.movieName.stars.length;
+// });
 
 var movieRatings = [
-  {name: "The Lobster", stars:[5]}
+  {name: "The Lobster", stars:["5","4"]},
+  {name: "The Prestige", stars:["4"]},
+  {name: "American Psycho", stars:["4"]}
 ]
-
 /* OLD CODE
 (function(){
 var app = angular.module('store',[]);
