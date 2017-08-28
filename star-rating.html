@@ -1,7 +1,10 @@
-<select ng-model='newReview.stars'>
-<option value="1">1 star</option>
-<option value="2">2 stars</option>
-<option value="3">3 stars</option>
-<option value="4">4 stars</option>
-<option value="5">5 stars</option>
-</select>
+<form name="reviewForm" ng-submit="this.stars.push(newReview)">
+    <select ng-model='newReview'>
+    <option value="1">1 star</option>
+    <option value="2">2 stars</option>
+    <option value="3">3 stars</option>
+    <option value="4">4 stars</option>
+    <option value="5">5 stars</option>
+    </select>
+  <input type="submit" value="Submit" />
+</form>

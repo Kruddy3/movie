@@ -7,22 +7,18 @@
     <script type="text/javascript" src="js.js"></script>
   </head>
   <body ng-controller="reviewsController as reviews">
+    {{reviews | json}}
+    <br>
+
     <div ng-repeat="movieName in reviews.movies">
-        {{movieName.name}}
-      <div ng-repeat="movieRatings in movieName.ratings">
-          <b>username: </b>{{movieRatings.user}}
-          <br>
-          <!--
-          <b>stars: </b>{{movieRatings.stars}}
-          !-->
-          {{userNameReview}}
-          <star-ratings></star-ratings>
-          <br>
-          <form ng-submit='submitReview(data)' ng-controller="submitReview">
-            <input type="text" ng-model="UserName" >
-            <input type="submit" id="submit" value="Submit" />
-          </form>
-      </div>
+      {{movieName.name}}
+        <b>stars: </b>{{movieRatings.stars}}
+        <br>
+        {{movieName.stars | json}}
+        <br>
+        {{newReview}}
+        {{myRating | json}} <!-- doesnt appear to work and I cant find the "output" command!-->
+        <star-ratings output='myRating'></star-ratings>
       <br>
     </div>
 

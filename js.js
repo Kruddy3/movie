@@ -19,21 +19,13 @@ app.directive('starRatings', function(){
 });
 
 
-app.controller('submitReview',function ($scope) {
-  $scope.movieRatings = []
-  $scope.UserName = 'UserName'
 
-  $scope.submit = function(){
-    $scope.ratings.push($scope);
-    $scope.UserName = '';
-  }
-});
 
 
 
 var movieRatings = [
-  {name: "The Lobster", ratings:[{user:"user", stars: 5}]},
-  {name: "The Prestige", ratings:[{user:"Kevin", stars: 4}]}]
+  {name: "The Lobster", stars:[5]}
+]
 
 /* OLD CODE
 (function(){
@@ -79,6 +71,27 @@ var movies = [
       }
     ]  },
   ];
+  app.controller('submitReview',function ($scope) {
+    $scope.movieRatings = []
+    $scope.UserName = 'UserName'
 
+    $scope.submit = function(){
+      $scope.ratings.push($scope);
+      $scope.UserName = '';
+    }
+  });
+
+
+
+~~~~~~V2
+app.controller('submitReview',function ($scope) {
+  $scope.movieRatings = []
+  $scope.UserName = 'UserName'
+
+  $scope.submit = function(){
+    $scope.ratings.push($scope);
+    $scope.UserName = '';
+  }
+});
 })();
 */
