@@ -19,48 +19,9 @@
         <br>
         {{newReview}}
         {{myRating | json}} <!-- doesnt appear to work and I cant find the "output" command!-->
-        <star-ratings output='myRating'></star-ratings>
+        <star-ratings starArr='movieName'></star-ratings>
       <br>
     </div>
 
-  </body>
-</html>
-
-
-
-<!-- OLD CODE
-<!DOCTYPE html>
-<html ng-app="store">
-  <head>
-    <script type="text/javascript" src="angular-1.6.5/angular.min.js"></script>
-    <script type="text/javascript" src="js.js"></script>
-  </head>
-  <body ng-controller='ReviewController as movieList'>
-    <div ng-repeat= "reviewZ in movieList.reviews">
-      <div ng-directive="ratings">
-          <h1>{{reviewZ.name}}</h1>
-              <h2 ng-repeat= "ratings in reviewZ.rating">
-                {{ratings.stars}}
-                <br>
-                {{ratings.body}}
-                <br>
-                {{ratings.author}}
-                <form name="reviewForm" ng-submit="movieList.addReview(product)">
-                  <p>{{newReview.stars}} {{newReview.body }} {{newReview.author}}</p>
-                  <select ng-model='newReview.stars'>
-                  <option value="1">1 star</option>
-                  <option value="2">2 stars</option>
-                  <option value="3">3 stars</option>
-                  <option value="4">4 stars</option>
-                  <option value="5">5 stars</option>
-                  </select>
-                  <textarea ng-model='newReview.body'></textarea>
-                  <label>by:</label>
-                  <input ng-model='newReview.author' type="email" />
-                  <input type="submit" value="Submit" />
-                </form>
-              </h2>
-        </div>
-      </div>
   </body>
 </html>

@@ -1,0 +1,62 @@
+~~~8/29 Start (had a lot of hw today so I started later than normal)
+Tackling the problems listed on github
+	Cant watch egghead videos because of the paywall
+
+What does link: 
+	"Directives that want to modify the DOM typically use the link option to register DOM listeners as well as update the DOM. It is executed after the template has been cloned and is where directive logic will be put."
+	ex
+	link: function(scope, element, attrs) {   
+		
+	//attrs is is a hash object with key-value pairs of normalized attribute names and their corresponding attribute values    
+        };
+	
+	// pretty much can give a directive access to the scope (I think)
+
+
+What is replace
+	If you set replace: true;
+		the directive template will replace the element that the directive is declared on. 
+			Why use this when you can use the directive as its own tag?
+			Using an attribute at times can be useful but what is the difference between restrict :"A" and this (just progressing past this)
+
+In the codepen "https://codepen.io/anon/pen/wqQXqW?editors=1011" 
+we are setting current: '=' (what is this doing)
+      scope: {
+        current: '='
+      },
+	//having difficulty finding this I assume "=" is a js notation i dont know
+
+		"For cases where the attribute name is the same as the value you want to bind to inside the directive's scope, you can use this shorthand syntax: = "
+
+Using a directives scope option makes an isolate scope which seperates the directives scope from the outside scope
+	-customerInfo = "=info" in myCustomer's scope when used like
+	<my-customer info="naomi"></my-customer>
+	takes the info passed into the directive and makes it equal to the directives own customerInfo which can be combined with the template url to manipulate it
+
+I understand the copepen example completely now I believe 
+
+What is $watch?
+	Well they say "Even without adding $watch, whatever you type in the input box gets updated in the backend automatically." 
+		So its not needed for two way data binding only to check if it is working (?)	
+
+You linked another egghead.io video which I can not watch
+
+
+Going to try and implement the new knowledge of linking the scope
+...
+I kept making changes and refreshing and everything kept working
+then i realized that it wasnt updating js.js so i had to hard refresh and now nothing works
+
+I got the link to work
+
+Required a value to be selected before it would be passed in
+
+END OF DAY
+
+
+
+
+
+
+
+	

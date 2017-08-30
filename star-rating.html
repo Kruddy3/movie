@@ -1,11 +1,10 @@
-<form name="reviewForm" ng-submit="movieName.stars.push(newReview)">
-
-    <select ng-model='newReview'>
+<form name="reviewForm">
+    <select name= 'starSelector' ng-model='rating'>
       <option value=1>1 star</option>
       <option value=2>2 stars</option>
       <option value=3>3 stars</option>
       <option value=4>4 stars</option>
       <option value=5>5 stars</option>
     </select>
-  <input type="submit" value="Submit" />
+    <button type="button" name="button"ng-click="addStar(rating)"required>Add Review</button>
 </form>
