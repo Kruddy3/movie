@@ -1,7 +1,7 @@
 var app = angular.module('movieList',[])
 
-app.controller('reviewsController',function(){
-  this.movies=movieRatings;
+app.controller('reviewsController',function($scope){
+  $scope.movies=movieRatings;
 });
 
 app.directive('starRatings', function(){

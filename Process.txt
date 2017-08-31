@@ -54,9 +54,34 @@ Required a value to be selected before it would be passed in
 END OF DAY
 
 
+~~~ 8/30 (Start)
+Trying to udnerstand the use of an isolate scope and why it should be used
+	Side note you can write a controller within a directive
+		ex 
+		    	controller:function($scope,$attrs,$interpolate){
+     		    		var myUrl=$interpolate($attrs.uploadUrl)($scope)
+    			},
 
+	What is Interpolate:
+	https://docs.angularjs.org/api/ng/service/$interpolate
+		$interpolate takes an optional fourth argument, allOrNothing. If allOrNothing is true, the interpolation function will return undefined unless all embedded expressions evaluate to a value other than undefined.
 
+WATCHING EGGHEAD VIDEOS TAKING NOTES
+	passing in scope allows each of an item in that directive to have its own scope. Very useful
+		breaks interaction with controllers wrapped around it
 
+I am confused by parts of the scope video mainly the parts around the '&' sign but a video goes over it in more detail so ill refrain from looking too much into it. Also the done{{chore:chore}} confuses me
+	"@" gives access to the attribute inside the scope
+		@ sign wants the {{}} for attibute
+	"=" doesnt need the {{}} and can make it a two way data binding through the attribute
+	"&"  allows you to invoke a method within the scope that your directive lives in
+		What is the difference between using this and just linking the scope?
+When do you use dial({message:value}) syntax i dont get the {message:value} thing and why you couldnt just pass value
 
+Difference between $scope and scope
+	linking scope is weird because the name doent matter because its always in the same order scope attr element
+	in a controller linking $http or $scope actually is what youre linking not just a name
+I'm getting sleepy so I'm going to bed
+I changed this.movies to use $scope so that movies was available in the scope of the controller to make things easier to understand
 
-	
+END OF DAY

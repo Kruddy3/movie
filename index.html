@@ -6,11 +6,11 @@
     <script type="text/javascript" src="angular-1.6.5/angular.min.js"></script>
     <script type="text/javascript" src="js.js"></script>
   </head>
-  <body ng-controller="reviewsController as reviews">
-    {{reviews | json}}
+  <body ng-controller="reviewsController">
+    {{movies | json}}
     <br>
 
-    <div ng-repeat="movieName in reviews.movies">
+    <div ng-repeat="movieName in movies">
       {{movieName.name}}
         <b>Average stars:</b>{{movieName.stars | json}}
         <br>
