@@ -1,10 +1,9 @@
-<form name="reviewForm">
-    <select name= 'starSelector' ng-model='rating'>
-      <option value=1>1 star</option>
-      <option value=2>2 stars</option>
-      <option value=3>3 stars</option>
-      <option value=4>4 stars</option>
-      <option value=5>5 stars</option>
-    </select>
-    <button type="button" name="button"ng-click="addStar(rating)"required>Add Review</button>
+<form name="reviewForm" ng-model='rating' star-updater>
+    {{rating}}
+    <img ng-src='{{starImg1}}' height="20" width="20" ng-click="rating=1;changeStars(rating)">
+    <img ng-src='{{starImg2}}' height="20" width="20" ng-click="rating=2;changeStars(rating)">
+    <img ng-src='{{starImg3}}' height="20" width="20" ng-click="rating=3;changeStars(rating)">
+    <img ng-src='{{starImg4}}' height="20" width="20" ng-click="rating=4;changeStars(rating)">
+    <img ng-src='{{starImg5}}' height="20" width="20" ng-click="rating=5;changeStars(rating)">
+  <button type="button" name="button"ng-click="addStar(rating)">Add Review</button>
 </form>

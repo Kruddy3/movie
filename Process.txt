@@ -88,4 +88,33 @@ END OF DAY
 
 ~~~8/31 Start
 my github account isnt being tracked with my submissions to the github page
+	have it set up on my laptop now atleast
+I tried texting you to figure out what else to work on but you didnt respond so I'm just going to add something
+...
+submit a username with your review
+	after this if the username already exists update that review instead of making a new one
+
+	~~~Progression
+	NVM recieved your text so went back to normal
+
+you want me to use 5 star icons and hover state
+
+What is hover state?
+	ngMouseover is a directive which is envoked when the element it is linked with is hovered over
+		
+Tried loading in the star image but was having difficulty
+	I load it in the review controller and within the star-rating i user it.
+		image too big gonna limit its size with html (using a seperate css file would be better but not for now)
+	It works and click to add works
+
+I want to make the stars empty but when you click one all the stars up until there fill
+	I am very confused on how to do this at the moment
+	I dont think im going about this a good way and I cant access rating for some reason to check what vaule and update
+
+now im trying to make a directive attribute that will be attaached to the form and check the value of rating to update the stars
+
+well the stars update dynamically as well as are cleared when you submit a review
+
+Gonna watch egghead videos again because I dont feel like I'm understanding everything enough
+
 	
