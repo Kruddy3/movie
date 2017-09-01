@@ -85,3 +85,7 @@ I'm getting sleepy so I'm going to bed
 I changed this.movies to use $scope so that movies was available in the scope of the controller to make things easier to understand
 
 END OF DAY
+
+~~~8/31 Start
+my github account isnt being tracked with my submissions to the github page
+	
